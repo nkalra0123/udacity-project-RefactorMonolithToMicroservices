@@ -22,7 +22,7 @@ script:
   - docker tag udagram-frontend nkalra0123/udagram-frontend:latest
 
   - docker build -t udagram-api-feed ./udagram-api-feed
-  - docker tag udagram-api-feed nkalra0123/udagram-frontend:latest
+  - docker tag udagram-api-feed nkalra0123/udagram-api-feed:latest
 
   - docker build -t udagram-api-users ./udagram-api-users
   - docker tag udagram-api-users nkalra0123/udagram-api-users:latest
