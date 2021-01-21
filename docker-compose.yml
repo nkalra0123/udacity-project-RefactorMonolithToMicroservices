@@ -44,6 +44,8 @@ services:
       - AWS_PROFILE=${AWS_PROFILE}
       - JWT_SECRET=${JWT_SECRET}
       - URL=${URL}
+    volumes:
+      - ~/.aws/:/root/.aws:ro
     ports:
       - 8081:8080
     restart: on-failure
@@ -64,7 +66,7 @@ services:
       - AWS_REGION=${AWS_REGION}
       - AWS_PROFILE=${AWS_PROFILE}
       - JWT_SECRET=${JWT_SECRET}
-      - URL={URL}
+      - URL=${URL}
 
     ports:
       - 8082:8080
