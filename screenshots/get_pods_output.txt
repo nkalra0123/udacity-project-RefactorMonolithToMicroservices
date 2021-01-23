@@ -1,0 +1,6 @@
+NAME                                 READY   STATUS    RESTARTS   AGE
+reverseproxy-85c95c757-ll4fg         1/1     Running   0          3m34s
+udagram-api-feed-5cdcbc89cc-sdtzv    1/1     Running   0          3m41s
+udagram-api-users-57574ccd8c-797f8   1/1     Running   0          3m39s
+udagram-api-users-57574ccd8c-k4w9l   1/1     Running   0          3m38s
+udagram-frontend-7797b99584-9pskq    1/1     Running   0          3m36s
