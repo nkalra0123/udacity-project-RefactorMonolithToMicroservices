@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+  name: udagram-api-users 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: udagram-api-users
+  template:
+    metadata:
+      labels:
+        name: udagram-api-users
+    spec:
+      containers:
+      - image: nkalra0123/udagram-api-users
+        name: udagram-api-users
+        imagePullPolicy: Always          
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - secretRef:
+              name: secrets
+      restartPolicy: Always
+
+

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+  name: udagram-frontend 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: udagram-frontend
+  template:
+    metadata:
+      labels:
+        name: udagram-frontend
+    spec:
+      containers:
+      - image: nkalra0123/udagram-frontend
+        name: udagram-frontend
+        imagePullPolicy: Always          
+        ports:
+        - containerPort: 80
+        envFrom:
+          - secretRef:
+              name: secrets
+      restartPolicy: Always
+
+

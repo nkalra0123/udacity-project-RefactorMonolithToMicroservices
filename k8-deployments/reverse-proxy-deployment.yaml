@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+  name: reverseproxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: reverseproxy
+  template:
+    metadata:
+      labels:
+        name: reverseproxy
+    spec:
+      containers:
+      - image: nkalra0123/reverse-proxy
+        name: reverseproxy
+        imagePullPolicy: Always          
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"       
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always
+
+
