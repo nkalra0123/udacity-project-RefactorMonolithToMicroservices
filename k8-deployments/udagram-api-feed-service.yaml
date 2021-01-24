@@ -10,4 +10,4 @@ spec:
     port: 8081
     targetPort: 8080
   selector:
-    service: udagram-api-feed
+    name: udagram-api-feed

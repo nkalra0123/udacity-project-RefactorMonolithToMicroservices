@@ -10,4 +10,4 @@ spec:
     port: 8082
     targetPort: 8080
   selector:
-    service: udagram-api-users
+    name: udagram-api-users
