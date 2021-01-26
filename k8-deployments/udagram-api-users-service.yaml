@@ -10,4 +10,4 @@ spec:
     port: 8082
     targetPort: 8080
   selector:
-    name: udagram-api-users
+    app: udagram-api-users-pod-label

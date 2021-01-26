@@ -2,20 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
+    app: udagram-api-users-pod-label
   name: udagram-api-users 
 spec:
   replicas: 2
   selector:
     matchLabels:
-      name: udagram-api-users
+      app: udagram-api-users-pod-label
   template:
     metadata:
       labels:
-        name: udagram-api-users
+        app: udagram-api-users-pod-label
     spec:
       containers:
       - image: nkalra0123/udagram-api-users
-        name: udagram-api-users
+        name: udagram-api-users-pod-name
         imagePullPolicy: Always          
         ports:
         - containerPort: 8080
