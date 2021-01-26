@@ -2,20 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-  name: udagram-frontend 
+    app: udagram-frontend-pod-label
+  name: udagram-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: udagram-frontend
+      app: udagram-frontend-pod-label
   template:
     metadata:
       labels:
-        name: udagram-frontend
+        app: udagram-frontend-pod-label
     spec:
       containers:
       - image: nkalra0123/udagram-frontend
-        name: udagram-frontend
+        name: udagram-frontend-pod-name
         imagePullPolicy: Always          
         ports:
         - containerPort: 80
